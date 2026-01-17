@@ -4,11 +4,11 @@ import Button from "./button";
 import { MdArrowDropDown } from "react-icons/md";
 import Link from "next/link";
 
-const Navbar = () => {
+const Navbar = ({ className }: { className: string }) => {
   return (
     <nav
       aria-label="Main navigation"
-      className="flex justify-between px-8 py-4 text-neutral-100 items-center"
+      className={`flex justify-between px-8 py-4 text-neutral-100 items-center ${className}`}
     >
       <ul className="flex gap-8 items-center">
         <li>
@@ -64,7 +64,6 @@ const Navbar = () => {
         </li>
         <li>
           <Button
-            type="button"
             textColor="text-primary-400"
             bgColor="bg-primary-200"
             bgColorHover="hover:bg-background-200"

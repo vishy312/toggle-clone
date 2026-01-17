@@ -8,16 +8,15 @@ const RotalicText = ({
   children: string;
 }) => {
   const textArray = children.split("");
-  console.log(textArray);
 
   return (
-    <div className={`flex tracking-tight ${className}`}>
+    <span className={`inline-flex tracking-tight ${className}`}>
       {textArray.map((letter, i) => (
         <span key={i} className="rotate-15 whitespace-pre">
           {letter}
         </span>
       ))}
-    </div>
+    </span>
   );
 };
 
